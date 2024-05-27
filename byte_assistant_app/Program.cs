@@ -1,3 +1,5 @@
+using byte_assistant_app.extra;
+
 namespace byte_assistant_app;
 
 static class Program
@@ -8,6 +10,7 @@ static class Program
     [STAThread]
     static void Main()
     {
+        new RichPresenceManager().Initialize();
         ApplicationConfiguration.Initialize();
         Application.Run(new GenericTrayIcon());
     }

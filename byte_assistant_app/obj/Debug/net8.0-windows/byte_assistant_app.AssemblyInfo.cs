@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("byte_assistant_app")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3c727aaac767538489ae1169b1134269c8b87620")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c28c6df6edbfc027e2b21657df6a6897a2a633fa")]
 [assembly: System.Reflection.AssemblyProductAttribute("byte_assistant_app")]
 [assembly: System.Reflection.AssemblyTitleAttribute("byte_assistant_app")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

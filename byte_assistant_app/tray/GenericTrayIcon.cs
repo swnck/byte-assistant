@@ -1,13 +1,16 @@
+using System.Speech.Recognition;
+using byte_assistant_app.util;
 using Microsoft.Win32;
 
 namespace byte_assistant_app;
 
 public partial class GenericTrayIcon : Form
 {
-    private NotifyIcon notifyIcon;
+        private NotifyIcon _notifyIcon;
         private ContextMenuStrip _contextMenuStrip;
         private ToolStripMenuItem _exitToolStripMenuItem;
         private ToolStripMenuItem _openToolStripMenuItem;
+        private SpeechRecognitionEngine recognizer;
 
         public GenericTrayIcon()
         {
@@ -15,58 +18,79 @@ public partial class GenericTrayIcon : Form
             InitializeTrayIcon();
             SetAutostart();
 
-            // Verstecke das Fenster und zeige es nicht in der Taskleiste an
-            Hide();
-            ShowInTaskbar = false;
+            Load += (s, e) => {
+                Hide();
+                ShowInTaskbar = false;
+            };
+            
+            ApplyStyles();
+        }
+        
+        protected override void WndProc(ref Message m)
+        {
+            base.WndProc(ref m);
+            if (m.Msg == Constans.WM_NCHITTEST && (int)m.Result == Constans.HT_CAPTION)
+            {
+                m.Result = (IntPtr)0x2; 
+            }
         }
 
         private void InitializeTrayIcon()
         {
             _contextMenuStrip = new ContextMenuStrip();
             _openToolStripMenuItem = new ToolStripMenuItem("Open", null, openToolStripMenuItem_Click);
-            _exitToolStripMenuItem = new ToolStripMenuItem("Exit", null, closeToolStripMenuItem_Click);
+            _exitToolStripMenuItem = new ToolStripMenuItem("Exit", null, (s, e) => Hide());
             _contextMenuStrip.Items.AddRange(new ToolStripItem[] { _openToolStripMenuItem, _exitToolStripMenuItem });
 
-            notifyIcon = new NotifyIcon(components)
+            _notifyIcon = new NotifyIcon(components)
             {
                 Icon = new Icon("icon.ico"),
                 ContextMenuStrip = _contextMenuStrip,
                 Text = "Byte-Assistant",
                 Visible = true
             };
+            
+            ControlBox = false;
+            TopMost = true;
+            FormBorderStyle = FormBorderStyle.None;
+            Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void ApplyStyles()
         {
-            Hide();
-            ShowInTaskbar = false;
+            BackColor = Color.DarkSlateBlue;
+            PictureBox pictureBox = new PictureBox
+            {
+                Image = Image.FromFile("icon.ico"),
+                Size = new Size(40, 40),
+                SizeMode = PictureBoxSizeMode.StretchImage,
+                Location = new Point(10, 10)
+            };
+            Controls.Add(pictureBox);
         }
+
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Show();
             WindowState = FormWindowState.Normal;
-            ShowInTaskbar = true;
             PositionWindowBottomRight();
-        }
-
-        private void closeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Hide();
-            ShowInTaskbar = false;
         }
 
         private void PositionWindowBottomRight()
         {
             Screen screen = Screen.PrimaryScreen;
             Rectangle workingArea = screen.WorkingArea;
-            Location = new Point(workingArea.Right - Width, workingArea.Bottom - Height);
+            Location = new Point(workingArea.Right - Width - 10, Height);
         }
 
+        [System.Runtime.InteropServices.DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn(int nLeftRect, int nTopRect, int nRightRect, int nBottomRect, int nWidthEllipse, int nHeightEllipse);
+        
         private void SetAutostart()
         {
             const string runKey = @"SOFTWARE\Microsoft\Windows\CurrentVersion\Run";
-            const string appName = "ByteAssistant";
+            const string appName = "Byte-Assistant";
             string appPath = Application.ExecutablePath;
 
             using (RegistryKey key = Registry.CurrentUser.OpenSubKey(runKey, true))

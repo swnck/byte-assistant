@@ -31,9 +31,9 @@ partial class GenericTrayIcon
     {
         this.components = new System.ComponentModel.Container();
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-        this.ClientSize = new System.Drawing.Size(450, 750);
+        this.ClientSize = new System.Drawing.Size(400, 150);
         this.Visible = false;
-        this.Text = "Form1";
+        this.Text = "Byte-Assistant";
     }
 
     #endregion

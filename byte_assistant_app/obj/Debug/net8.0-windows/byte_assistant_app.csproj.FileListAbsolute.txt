@@ -13,3 +13,9 @@ C:\Users\schwe\RiderProjects\byte-assistant\byte_assistant_app\obj\Debug\net8.0-
 C:\Users\schwe\RiderProjects\byte-assistant\byte_assistant_app\obj\Debug\net8.0-windows\byte_assistant_app.pdb
 C:\Users\schwe\RiderProjects\byte-assistant\byte_assistant_app\obj\Debug\net8.0-windows\byte_assistant_app.genruntimeconfig.cache
 C:\Users\schwe\RiderProjects\byte-assistant\byte_assistant_app\obj\Debug\net8.0-windows\ref\byte_assistant_app.dll
+C:\Users\schwe\RiderProjects\byte-assistant\byte_assistant_app\bin\Debug\net8.0-windows\DiscordRPC.dll
+C:\Users\schwe\RiderProjects\byte-assistant\byte_assistant_app\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\schwe\RiderProjects\byte-assistant\byte_assistant_app\obj\Debug\net8.0-windows\byte_assistant_app.csproj.AssemblyReference.cache
+C:\Users\schwe\RiderProjects\byte-assistant\byte_assistant_app\obj\Debug\net8.0-windows\byte_ass.B52C5D5D.Up2Date
+C:\Users\schwe\RiderProjects\byte-assistant\byte_assistant_app\bin\Debug\net8.0-windows\System.Speech.dll
+C:\Users\schwe\RiderProjects\byte-assistant\byte_assistant_app\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Speech.dll

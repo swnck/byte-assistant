@@ -9,9 +9,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Compile Update="GenericTrayIcon.Designer.cs">
-        <DependentUpon>GenericTrayIcon.cs</DependentUpon>
-      </Compile>
+      <PackageReference Include="DiscordRichPresence" Version="1.2.1.24" />
+      <PackageReference Include="System.Speech" Version="9.0.0-preview.4.24266.19" />
     </ItemGroup>
 
 </Project>
