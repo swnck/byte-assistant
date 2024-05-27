@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url:
+    username:
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+  mvc:
+    message-codes-resolver-format: postfix_error_code
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 5MB
+server:
+  error:
+    include-message: always
+    include-stacktrace: never
