@@ -1,0 +1,15 @@
+C:\Users\schwe\RiderProjects\byte-assistant\byte_assistant_app\bin\Debug\net8.0-windows\byte_assistant_app.exe
+C:\Users\schwe\RiderProjects\byte-assistant\byte_assistant_app\bin\Debug\net8.0-windows\byte_assistant_app.deps.json
+C:\Users\schwe\RiderProjects\byte-assistant\byte_assistant_app\bin\Debug\net8.0-windows\byte_assistant_app.runtimeconfig.json
+C:\Users\schwe\RiderProjects\byte-assistant\byte_assistant_app\bin\Debug\net8.0-windows\byte_assistant_app.dll
+C:\Users\schwe\RiderProjects\byte-assistant\byte_assistant_app\bin\Debug\net8.0-windows\byte_assistant_app.pdb
+C:\Users\schwe\RiderProjects\byte-assistant\byte_assistant_app\obj\Debug\net8.0-windows\byte_assistant_app.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\schwe\RiderProjects\byte-assistant\byte_assistant_app\obj\Debug\net8.0-windows\byte_assistant_app.AssemblyInfoInputs.cache
+C:\Users\schwe\RiderProjects\byte-assistant\byte_assistant_app\obj\Debug\net8.0-windows\byte_assistant_app.AssemblyInfo.cs
+C:\Users\schwe\RiderProjects\byte-assistant\byte_assistant_app\obj\Debug\net8.0-windows\byte_assistant_app.csproj.CoreCompileInputs.cache
+C:\Users\schwe\RiderProjects\byte-assistant\byte_assistant_app\obj\Debug\net8.0-windows\byte_assistant_app.sourcelink.json
+C:\Users\schwe\RiderProjects\byte-assistant\byte_assistant_app\obj\Debug\net8.0-windows\byte_assistant_app.dll
+C:\Users\schwe\RiderProjects\byte-assistant\byte_assistant_app\obj\Debug\net8.0-windows\refint\byte_assistant_app.dll
+C:\Users\schwe\RiderProjects\byte-assistant\byte_assistant_app\obj\Debug\net8.0-windows\byte_assistant_app.pdb
+C:\Users\schwe\RiderProjects\byte-assistant\byte_assistant_app\obj\Debug\net8.0-windows\byte_assistant_app.genruntimeconfig.cache
+C:\Users\schwe\RiderProjects\byte-assistant\byte_assistant_app\obj\Debug\net8.0-windows\ref\byte_assistant_app.dll
