@@ -16,7 +16,8 @@ public partial class GenericTrayIcon : Form
         {
             InitializeComponent();
             InitializeTrayIcon();
-            SetAutostart();
+            
+            //SystemFunctions.setAutoStart();
 
             Load += (s, e) => {
                 Hide();
@@ -86,26 +87,4 @@ public partial class GenericTrayIcon : Form
 
         [System.Runtime.InteropServices.DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn(int nLeftRect, int nTopRect, int nRightRect, int nBottomRect, int nWidthEllipse, int nHeightEllipse);
-        
-        private void SetAutostart()
-        {
-            const string runKey = @"SOFTWARE\Microsoft\Windows\CurrentVersion\Run";
-            const string appName = "Byte-Assistant";
-            string appPath = Application.ExecutablePath;
-
-            using (RegistryKey key = Registry.CurrentUser.OpenSubKey(runKey, true))
-            {
-                if (key != null)
-                {
-                    key.SetValue(appName, appPath);
-                }
-                else
-                {
-                    using (RegistryKey newKey = Registry.CurrentUser.CreateSubKey(runKey))
-                    {
-                        newKey.SetValue(appName, appPath);
-                    }
-                }
-            }
-        }
 }
