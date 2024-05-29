@@ -1,4 +1,3 @@
-using System.Globalization;
 using byte_assistant_app.extra;
 using byte_assistant_app.translation;
 
@@ -16,7 +15,7 @@ static class Program
     static void Main()
     {
         _richPresenceManager.Initialize();
-        _translationManager.Initialize(CultureInfo.InstalledUICulture);
+        _translationManager.Initialize();
         
         ApplicationConfiguration.Initialize();
         Application.Run(new GenericTrayIcon());

@@ -1,3 +1,5 @@
+using System.Globalization;
+using byte_assistant_app.manager;
 using DiscordRPC;
 using DiscordRPC.Logging;
 using Button = DiscordRPC.Button;
@@ -5,14 +7,14 @@ using Timer = System.Threading.Timer;
 
 namespace byte_assistant_app.extra;
 
-public class RichPresenceManager: IDisposable
+public class RichPresenceManager : Manager
 {
     private DiscordRpcClient _client = new DiscordRpcClient("1244730656441761802");
     
     private string _state = "Listen to: Byte, ...  ";
-
-    public void Initialize()
-    { 
+    
+    public override void Initialize()
+    {
         _client.OnReady += (s, e) => Console.WriteLine($"Received Ready from user {e.User.Username}");
         _client.Logger = new ConsoleLogger()
         {
@@ -41,6 +43,11 @@ public class RichPresenceManager: IDisposable
         );
     }
 
+    public override void Initialize(CultureInfo ci)
+    {
+        throw new NotImplementedException();
+    }
+
     public void update(string state)
     {
         _state = state;
@@ -51,7 +58,7 @@ public class RichPresenceManager: IDisposable
     {
         _client.Invoke();
     }
-
+    
     public void Dispose()
     {
         _client.Dispose();

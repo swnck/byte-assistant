@@ -1,15 +1,21 @@
 using System.Collections;
 using System.Globalization;
+using byte_assistant_app.manager;
 
 namespace byte_assistant_app.translation;
 
-public class TranslationManager
+public class TranslationManager: Manager
 {
     public static ArrayList translations = new ArrayList();
     
     private static CultureInfo _ci;
     
-    public void Initialize(CultureInfo ci)
+    public override void Initialize()
+    {
+        Initialize(CultureInfo.InstalledUICulture);
+    }
+    
+    public override void Initialize(CultureInfo ci)
     {
         _ci = ci;
         
@@ -52,5 +58,10 @@ public class TranslationManager
             return translated;
         }
         return "%"+key+"%";
+    }
+
+    public void Dispose()
+    {
+        throw new NotImplementedException();
     }
 }
