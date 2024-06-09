@@ -1,16 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "3zhF4GCedfzAdhwvw8qb8c81+bHh3Ssg7n7I1TNtnXT3aSTA+4FQgs0cLwo2Ih9Jgl3kmF6naZg16U8j4hFk4A==",
+  "dgSpecHash": "GmMuOolxRDAWkZmzTKvC8tk5e3TbFC20HzGkAqoC4tDnjcDuzZTPmkTuD4yLIC6R4UZSBfHy7XBg9ClfGzh2gw==",
   "success": true,
   "projectFilePath": "C:\\Users\\schwe\\RiderProjects\\byte-assistant\\byte_assistant_app\\byte_assistant_app.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\schwe\\.nuget\\packages\\crowdin.api\\2.22.1\\crowdin.api.2.22.1.nupkg.sha512",
     "C:\\Users\\schwe\\.nuget\\packages\\discordrichpresence\\1.2.1.24\\discordrichpresence.1.2.1.24.nupkg.sha512",
+    "C:\\Users\\schwe\\.nuget\\packages\\jetbrains.annotations\\2021.3.0\\jetbrains.annotations.2021.3.0.nupkg.sha512",
+    "C:\\Users\\schwe\\.nuget\\packages\\microsoft.cognitiveservices.speech\\1.37.0\\microsoft.cognitiveservices.speech.1.37.0.nupkg.sha512",
     "C:\\Users\\schwe\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
     "C:\\Users\\schwe\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
     "C:\\Users\\schwe\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\schwe\\.nuget\\packages\\system.security.accesscontrol\\4.5.0\\system.security.accesscontrol.4.5.0.nupkg.sha512",
-    "C:\\Users\\schwe\\.nuget\\packages\\system.security.principal.windows\\4.5.0\\system.security.principal.windows.4.5.0.nupkg.sha512",
-    "C:\\Users\\schwe\\.nuget\\packages\\system.speech\\9.0.0-preview.4.24266.19\\system.speech.9.0.0-preview.4.24266.19.nupkg.sha512"
+    "C:\\Users\\schwe\\.nuget\\packages\\system.security.principal.windows\\4.5.0\\system.security.principal.windows.4.5.0.nupkg.sha512"
   ],
   "logs": []
 }

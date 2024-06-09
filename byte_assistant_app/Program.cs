@@ -1,4 +1,5 @@
 using byte_assistant_app.extra;
+using byte_assistant_app.openai;
 using byte_assistant_app.translation;
 
 namespace byte_assistant_app;
@@ -12,10 +13,13 @@ static class Program
     ///  The main entry point for the application.
     /// </summary>
     [STAThread]
-    static void Main()
+    static async Task Main()
     {
         _richPresenceManager.Initialize();
         _translationManager.Initialize();
+        
+        Recognition recognition = new Recognition();
+        await recognition.InitializeAsync();
         
         ApplicationConfiguration.Initialize();
         Application.Run(new GenericTrayIcon());

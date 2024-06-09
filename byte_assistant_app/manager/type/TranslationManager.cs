@@ -25,6 +25,11 @@ public class TranslationManager: Manager
         
         //ToDo: Add locale configs or more translations
     }
+    
+    public static CultureInfo getCultureInfo()
+    {
+        return _ci;
+    }
 
     public static ArrayList getTranslations()
     {

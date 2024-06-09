@@ -1,6 +1,4 @@
-using System.Speech.Recognition;
 using byte_assistant_app.util;
-using Microsoft.Win32;
 
 namespace byte_assistant_app;
 
@@ -10,7 +8,6 @@ public partial class GenericTrayIcon : Form
         private ContextMenuStrip _contextMenuStrip;
         private ToolStripMenuItem _exitToolStripMenuItem;
         private ToolStripMenuItem _openToolStripMenuItem;
-        private SpeechRecognitionEngine recognizer;
 
         public GenericTrayIcon()
         {
